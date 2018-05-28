@@ -17,10 +17,12 @@ export default new Router({
 	}, {
 		path: '/',
 		component: Home,
-		name: '首页'
+		name: '首页',
+		icon: 'el-icon-setting'
 	},{
 		path:'/upload',
 		name: '文件上传',
 		component: Upload,
+	 	icon: 'el-icon-date',
 	}]
 })
