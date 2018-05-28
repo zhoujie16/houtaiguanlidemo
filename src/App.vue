@@ -13,10 +13,14 @@
 </script>
 
 <style>
+	 /*@import "../static/css/main.css";*/
+	 /*深色主题*/
+    /*@import "../static/css/color-dark.css";*/    
 	#app {
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		width: 100%;
 	}
+	
 </style>

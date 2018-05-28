@@ -5,6 +5,8 @@ import App from './App'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import '../static/css/color-dark.css'
+import '../static/css/main.css'
 
 import router from './router'
 
@@ -23,6 +25,9 @@ router.beforeEach((to, from, next) => {
 		next()
 	}
 })
+
+window.Vue = new Vue();
+
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
