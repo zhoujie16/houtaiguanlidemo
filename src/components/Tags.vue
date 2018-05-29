@@ -61,7 +61,7 @@
                     return item.path === route.path;
                 })
                 !isExist && this.tagsList.push({
-                    title: route.meta.title,
+                    title: route.name,
                     path: route.path
                 })
             },

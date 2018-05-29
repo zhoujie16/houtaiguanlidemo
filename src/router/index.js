@@ -11,18 +11,25 @@ Vue.use(Router)
 export default new Router({
 	routes: [{
 		path: '/login',
-		name: 'Login',
+		name: '登录',
 		component: Login,
 		hidden: true
 	}, {
 		path: '/',
 		component: Home,
 		name: '首页',
-		icon: 'el-icon-setting'
+		icon: 'el-icon-setting',
 	},{
-		path:'/upload',
-		name: '文件上传',
-		component: Upload,
-	 	icon: 'el-icon-date',
+		path:'/',
+		name: '表单相关',
+		component: Home,
+		icon: 'el-icon-setting',
+		children: [{
+			path: '/upload',
+			name: '文件上传',
+			component: Upload,
+			icon: 'el-icon-date',
+
+		}],
 	}]
-})
+});

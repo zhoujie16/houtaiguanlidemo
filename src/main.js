@@ -26,6 +26,7 @@ router.beforeEach((to, from, next) => {
 	}
 })
 
+window._log = console.log;
 window.Vue = new Vue();
 
 /* eslint-disable no-new */

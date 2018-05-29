@@ -2,13 +2,13 @@
     <div class="sidebar">
         <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
             text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>
-            <template v-for="item in $router.options.routes">
-                <template v-if="item.subs">
-                    <el-submenu :index="item.path" :key="item.path">
+            <template v-for="item in $router.options.routes" v-if="!item.hidden">
+                <template v-if="item.children">
+                    <el-submenu :index="item.path">
                         <template slot="title">
                             <i :class="item.icon"></i><span slot="title">{{ item.name }}</span>
                         </template>
-                        <el-menu-item v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">
+                        <el-menu-item v-for="(subItem,i) in item.children" :key="i" :index="subItem.path">
                             {{ subItem.name }}
                         </el-menu-item>
                     </el-submenu>
