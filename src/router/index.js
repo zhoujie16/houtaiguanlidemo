@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Login from '@/views/Login'
 import Home from '@/views/Home'
 import Upload from '@/views/Upload'
+import TableTree from '@/views/TableTree'
+import UserManager from '@/views/UserManager'
 //import Table from '@/views/Table'
 //import Form from '@/views/Form'
 
@@ -15,11 +17,23 @@ export default new Router({
 		component: Login,
 		hidden: true
 	}, {
-		path: '/',
+		path: '/home',
 		component: Home,
 		name: '首页',
 		icon: 'el-icon-setting',
 	},{
+		path: '/usermanager',
+		component: UserManager,
+		name: '用户管理',
+		icon: 'el-icon-setting',
+	},{
+			path: '/upload',
+			name: '文件上传',
+			component: Upload,
+			icon: 'el-icon-date',
+
+		}
+	,{
 		path:'/',
 		name: '表单相关',
 		component: Home,
@@ -28,6 +42,12 @@ export default new Router({
 			path: '/upload',
 			name: '文件上传',
 			component: Upload,
+			icon: 'el-icon-date',
+
+		},{
+			path: '/tabletree',
+			name: '树形表格',
+			component: TableTree,
 			icon: 'el-icon-date',
 
 		}],

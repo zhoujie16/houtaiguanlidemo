@@ -4,15 +4,19 @@ import Vue from 'vue'
 import App from './App'
 
 import ElementUI from 'element-ui'
+import ZkTable from 'vue-table-with-tree-grid'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../static/css/color-dark.css'
 import '../static/css/main.css'
+ 
+
 
 import router from './router'
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+Vue.use(ZkTable)
 
 router.beforeEach((to, from, next) => {
 	//NProgress.start();
