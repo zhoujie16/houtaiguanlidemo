@@ -17,24 +17,12 @@ export default new Router({
 		component: Login,
 		hidden: true
 	}, {
-		path: '/home',
+		path: '/',
 		component: Home,
 		name: '首页',
 		icon: 'el-icon-setting',
 	},{
-		path: '/usermanager',
-		component: UserManager,
-		name: '用户管理',
-		icon: 'el-icon-setting',
-	},{
-			path: '/upload',
-			name: '文件上传',
-			component: Upload,
-			icon: 'el-icon-date',
-
-		}
-	,{
-		path:'/',
+		path:'/bd',
 		name: '表单相关',
 		component: Home,
 		icon: 'el-icon-setting',
@@ -51,5 +39,17 @@ export default new Router({
 			icon: 'el-icon-date',
 
 		}],
+	},{
+		path: '/lz',
+		component: Home,
+		name: '例子',
+		icon: 'el-icon-setting',
+		children: [{
+			path: '/UserManager',
+			name: '用户管理',
+			component: UserManager,
+			icon: 'el-icon-date',
+
+		}]
 	}]
 });

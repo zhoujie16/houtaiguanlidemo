@@ -1,5 +1,5 @@
 <template lang="html">
-	<div id="example"> 
+	<div class="container">
 		<ul class="switch-list">
 			<li class="switch-item" v-for="item in propList">
 				<span>{{ item.name }}: </span>
