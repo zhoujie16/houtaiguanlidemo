@@ -45,6 +45,7 @@
 					<el-button>重置</el-button>
 				</el-form-item>
 			</el-form>
+			
 			<el-table :data="tableData" border stripe size="small">
 				<el-table-column type="index"></el-table-column>
 				<el-table-column type="selection" width="40"></el-table-column>
@@ -53,8 +54,9 @@
 				<el-table-column prop="xingming" label="姓名" width=""></el-table-column>
 				<el-table-column prop="jigou" label="机构" width=""></el-table-column>
 			</el-table>
-			<el-pagination small background layout="prev, pager, next" :total="50">
-			</el-pagination>
+			<el-row type="flex" justify="end">
+				<el-pagination small background layout="prev, pager, next" :total="50"></el-pagination>
+			</el-row>
 		</el-main>
 	</div>
 </template>
