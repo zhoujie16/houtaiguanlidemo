@@ -32,7 +32,10 @@
         created(){
             Vue.$on('collapse', msg => {
                 this.collapse = msg;
-            })
-        }
+            });
+        },
+		mounted(){
+			
+		}
     }
 </script>
